@@ -1,4 +1,4 @@
-import arrow from "../assets/icons/arrow.png";
+import arrow from "../assets/icons/Arrow.png";
 import shopperIcon from "../assets/icons/vector-3.png";
 import vendorIcon from "../assets/icons/vector-2.png";
 import driverIcon from "../assets/icons/vector-13.png";
