@@ -2,7 +2,7 @@ import shoppingApp from "../assets/images/shopping.png";
 
 import discoverIcon from "../assets/icons/vector-6.png";
 import routineIcon from "../assets/icons/vector-5.png";
-import orderIcon from "../assets/icons/vector-6.png";
+import orderIcon from "../assets/icons/vector-4.png";
 
 const features = [
   {
