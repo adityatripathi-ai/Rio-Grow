@@ -1,7 +1,7 @@
 import arrow from "../assets/icons/Arrow.png";
-import shopperIcon from "../assets/icons/vector-3.png";
-import vendorIcon from "../assets/icons/vector-2.png";
-import driverIcon from "../assets/icons/vector-13.png";
+import shopperIcon from "../assets/icons/Vector-3.png";
+import vendorIcon from "../assets/icons/Vector-2.png";
+import driverIcon from "../assets/icons/Vector-13.png";
 
 const features = [
   {

@@ -3,9 +3,9 @@ import storeStats from "../assets/images/store-status.png";
 import inventory from "../assets/images/inventory-preview.png";
 import orderManagement from "../assets/images/Order-management-preview.png";
 
-import catalogIcon from "../assets/icons/vector-9.png";
-import orderIcon from "../assets/icons/vector-8.png";
-import statsIcon from "../assets/icons/vector-7.png";
+import catalogIcon from "../assets/icons/Vector-9.png";
+import orderIcon from "../assets/icons/Vector-8.png";
+import statsIcon from "../assets/icons/Vector-7.png";
 
 const features = [
   {

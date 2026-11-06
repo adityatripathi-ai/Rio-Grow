@@ -3,9 +3,9 @@ import goodMorning from "../assets/images/Good-morning.png";
 import optimizedRoute from "../assets/images/Optimized-route-preview.png";
 import earningPreview from "../assets/images/Earnings-preview.png";
 
-import deliveryIcon from "../assets/icons/vector-12.png";
-import routeIcon from "../assets/icons/vector-11.png";
-import earningsIcon from "../assets/icons/vector-10.png";
+import deliveryIcon from "../assets/icons/Vector-12.png";
+import routeIcon from "../assets/icons/Vector-11.png";
+import earningsIcon from "../assets/icons/Vector-10.png";
 
 const features = [
   {

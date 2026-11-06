@@ -1,6 +1,6 @@
-import discoverIcon from "../assets/icons/vector.png";
-import prepareIcon from "../assets/icons/vector-14.png";
-import deliveryIcon from "../assets/icons/vector-13.png";
+import discoverIcon from "../assets/icons/Vector.png";
+import prepareIcon from "../assets/icons/Vector-14.png";
+import deliveryIcon from "../assets/icons/Vector-13.png";
 
 const steps = [
   {
