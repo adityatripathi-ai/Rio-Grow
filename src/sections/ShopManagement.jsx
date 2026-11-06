@@ -1,6 +1,6 @@
 
 import storeStats from "../assets/images/store-status.png";
-import inventory from "../assets/images/inventory-preview.png";
+import inventory from "../assets/images/Inventory-preview.png";
 import orderManagement from "../assets/images/Order-management-preview.png";
 
 import catalogIcon from "../assets/icons/Vector-9.png";
