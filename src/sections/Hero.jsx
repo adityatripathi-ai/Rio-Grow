@@ -80,7 +80,7 @@ const Hero = () => {
               alt="RioGrow shopping application"
               className="
                 absolute
-                w-[155px] sm:w-[210px] lg:w-[250px]
+                w-[165px] sm:w-[210px] lg:w-[250px]
                 left-1/2 lg:left-[8%]
                 -translate-x-[80%] lg:translate-x-0
                 top-[8%]
@@ -96,10 +96,10 @@ const Hero = () => {
               alt="RioGrow local sellers application"
               className="
                 absolute
-                w-[155px] sm:w-[210px] lg:w-[250px]
+                w-[165px] sm:w-[210px] lg:w-[250px]
                 left-1/2 lg:left-[38%]
                 -translate-x-[25%] lg:translate-x-0
-                top-[17%]
+                top-[12%]
                 rotate-[1deg]
                 z-20
                 object-contain drop-shadow-xl
