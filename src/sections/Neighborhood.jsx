@@ -1,3 +1,6 @@
+
+import { motion } from "framer-motion";
+
 import arrow from "../assets/icons/Arrow.png";
 import shopperIcon from "../assets/icons/Vector-3.png";
 import vendorIcon from "../assets/icons/Vector-2.png";
@@ -33,17 +36,65 @@ const features = [
   },
 ];
 
+// Heading animation
+const headingVariants = {
+  hidden: {
+    opacity: 0,
+    y: 35,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Cards animation
+const cardContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Neighborhood = () => {
   return (
     <section
       id="why-regency"
-      className="w-full bg-white py-16 lg:py-20"
+      className="w-full bg-white py-16 lg:py-20 overflow-hidden"
     >
       <div className="max-w-[1200px] mx-auto px-5 lg:px-10">
 
         {/* SECTION HEADING */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-10">
-          <div>
+
+          {/* LEFT HEADING */}
+          <motion.div
+            variants={headingVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <p className="text-[#F15A24] text-[10px] font-semibold tracking-wider mb-3">
               ✦ THE RIOGROW OVERVIEW
             </p>
@@ -53,34 +104,83 @@ const Neighborhood = () => {
               <br />
               Three ways to be part of it.
             </h2>
-          </div>
+          </motion.div>
 
-          <p className="text-gray-500 text-xs md:text-sm leading-relaxed max-w-[350px]">
+          {/* RIGHT DESCRIPTION */}
+          <motion.p
+            initial={{
+              opacity: 0,
+              x: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
+            className="text-gray-500 text-xs md:text-sm leading-relaxed max-w-[350px]"
+          >
             Riogrow brings shoppers, local businesses and
             delivery partners together — from the first
             browse to the final doorstep.
-          </p>
+          </motion.p>
+
         </div>
 
         {/* FEATURE CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <motion.div
+          variants={cardContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+        >
+
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-[#FFFCF3] rounded-2xl p-6 border border-[#F8F1E3] hover:-translate-y-1 transition-all duration-300"
+              variants={cardVariants}
+              whileHover={{
+                y: -8,
+                transition: {
+                  duration: 0.3,
+                },
+              }}
+              className="
+                bg-[#FFFCF3]
+                rounded-2xl
+                p-6
+                border border-[#F8F1E3]
+                hover:shadow-xl
+                hover:border-[#F5DFAF]
+                transition-shadow duration-300
+              "
             >
 
               {/* ICON AND LABEL */}
               <div className="flex items-center justify-between mb-6">
-                <img
+
+                <motion.img
                   src={feature.icon}
                   alt={feature.label}
                   className="w-7 h-7 object-contain"
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 10,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                  }}
                 />
 
                 <span className="text-[9px] font-semibold text-[#202B3C]">
                   {feature.label}
                 </span>
+
               </div>
 
               {/* CARD TITLE */}
@@ -100,14 +200,28 @@ const Neighborhood = () => {
               >
                 {feature.link}
 
-                <span className="text-[#4d4644] text-sm">
-                  <img src={arrow} alt="" srcset="" />
-                </span>
+                <motion.span
+                  className="text-[#4d4644] text-sm"
+                  whileHover={{
+                    x: 6,
+                  }}
+                  transition={{
+                    duration: 0.25,
+                  }}
+                >
+                  <img
+                    src={arrow}
+                    alt=""
+                    className="w-4 h-4 object-contain"
+                  />
+                </motion.span>
+
               </a>
 
-            </div>
+            </motion.div>
           ))}
-        </div>
+
+        </motion.div>
 
       </div>
     </section>
